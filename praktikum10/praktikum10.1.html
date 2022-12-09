@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        table{
+            width: 50%;
+            border: solid black;
+        }
+    </style>
+
+    <script>
+        function hitung(){
+            let inputan = document.getElementById("input").value;
+            let mata_uang = document.getElementById("matauang").value;
+            let hasil = inputan * mata_uang;
+            console.log(hasil);
+
+            let area_hasil = document.getElementById("wadah_hasil");
+
+            area_hasil.innerHTML = hasil;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td>Masukan Nilai</td>
+                <td>Mata Uang</td>
+                <td>Nilai Rupiah</td>
+                <tr>
+                    <td>
+                        <input type="number" onchange="hitung()" id="input">
+                    </td>
+                    <td>
+                        <select name="" id="matauang" onchange="hitung()">
+                            <option value="9915"> Dollar us </option>
+                            <option value="13472"> Dollar singapure </option>
+                            <option value="874">Ringgit malaysia </option>
+                            <option value="120">Ven japan </option>
+                            <option value="15888">Euro </option>
+                            <option value="3592">Rial arab saudi</option>
+                        </select>
+                    </td>
+                    <td><p id="wadah_hasil"></p></td>
+                </tr>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
